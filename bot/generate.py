@@ -6,6 +6,7 @@ import json
 import random
 
 import anthropic
+from pydantic import ValidationError
 
 from .config import TYPES
 from .schema import Deck
@@ -134,24 +135,80 @@ def research(category: str, lens: str, history: list[dict], today: dt.date) -> s
     raise RuntimeError("리서치가 pause_turn 한도를 넘었습니다")
 
 
+def _extract_json(text: str) -> str:
+    start, end = text.find("{"), text.rfind("}")
+    if start < 0 or end <= start:
+        raise ValueError("응답에서 JSON 객체를 찾지 못했습니다")
+    return text[start : end + 1]
+
+
+def _check_deck(deck: Deck) -> list[str]:
+    """스키마로는 못 거르는 핸즈오프 규칙 검사."""
+    problems = []
+    n = len(deck.cards)
+    if not 5 <= n <= 7:
+        problems.append(f"카드는 5~7장이어야 하는데 {n}장입니다")
+    if deck.cards and deck.cards[0].pattern != "cover":
+        problems.append("첫 장은 cover 여야 합니다")
+    if deck.cards and deck.cards[-1].pattern != "conclusion":
+        problems.append("마지막 장은 conclusion 이어야 합니다")
+    for i, c in enumerate(deck.cards, 1):
+        if c.pattern in ("compare", "vs") and len(c.boxes or []) != 2:
+            problems.append(f"{i}장({c.pattern}): boxes 는 정확히 2개")
+        if c.pattern == "list" and len(c.items or []) != 3:
+            problems.append(f"{i}장(list): items 는 정확히 3개")
+        if c.pattern == "chips" and not c.groups:
+            problems.append(f"{i}장(chips): groups 가 비었습니다")
+        if c.pattern == "stat" and not c.stat_big:
+            problems.append(f"{i}장(stat): stat_big 이 비었습니다")
+        if c.pattern == "conclusion" and not c.message:
+            problems.append(f"{i}장(conclusion): message 가 비었습니다")
+        if c.title.count("[[") > 1:
+            problems.append(f"{i}장: 형광펜 [[ ]] 은 한 군데만")
+    return problems
+
+
 def compose(notes: str, category: str, today: dt.date) -> Deck:
+    """구조화 출력 대신 JSON 텍스트를 받아 pydantic 으로 검증하고, 틀리면 이유를 알려 최대 2번 다시 쓰게 한다.
+    (덱 스키마가 커서 구조화 출력의 문법 크기 제한에 걸림)"""
     type_names = ", ".join(f"{n}번 {t['name']}" for n, t in TYPES.items())
-    msg = _client().beta.messages.parse(
-        model=MODEL,
-        max_tokens=16000,
-        system=COMPOSE_SYSTEM.replace("{type_names}", type_names),
-        messages=[{
-            "role": "user",
-            "content": f"날짜: {today.isoformat()} / 카테고리: {category}\n\n<research_notes>\n{notes}\n</research_notes>\n\n이 노트로 카드뉴스 덱을 만들어 줘.",
-        }],
-        output_format=Deck,
-        output_config={"effort": "high"},
-        betas=BETAS,
-        fallbacks="default",
+    schema = json.dumps(Deck.model_json_schema(), ensure_ascii=False)
+    system = (
+        COMPOSE_SYSTEM.replace("{type_names}", type_names)
+        + "\n[출력 형식] 아래 JSON 스키마를 따르는 JSON 객체 하나만 출력한다. 설명·코드블록 없이 JSON만.\n"
+        + schema
     )
-    if msg.stop_reason == "refusal" or msg.parsed_output is None:
-        raise RuntimeError(f"작성 단계 실패: stop_reason={msg.stop_reason}")
-    return msg.parsed_output
+    messages = [{
+        "role": "user",
+        "content": f"날짜: {today.isoformat()} / 카테고리: {category}\n\n<research_notes>\n{notes}\n</research_notes>\n\n이 노트로 카드뉴스 덱을 만들어 줘.",
+    }]
+    last_error = ""
+    for _ in range(3):
+        with _client().beta.messages.stream(
+            model=MODEL,
+            max_tokens=32000,
+            system=system,
+            messages=messages,
+            output_config={"effort": "high"},
+            betas=BETAS,
+            fallbacks="default",
+        ) as stream:
+            msg = stream.get_final_message()
+        if msg.stop_reason == "refusal":
+            raise RuntimeError(f"작성 단계 거절: {msg.stop_details}")
+        try:
+            deck = Deck.model_validate_json(_extract_json(_text(msg)))
+            problems = _check_deck(deck)
+            if not problems:
+                return deck
+            last_error = "규칙 위반:\n- " + "\n- ".join(problems)
+        except (ValidationError, ValueError) as e:
+            last_error = f"JSON 검증 실패:\n{e}"
+        messages += [
+            {"role": "assistant", "content": msg.content},
+            {"role": "user", "content": f"{last_error}\n\n고쳐서 전체 JSON을 다시 출력해 줘."},
+        ]
+    raise RuntimeError(f"카드 작성이 3번 모두 검증에 실패했습니다. 마지막 오류: {last_error[:500]}")
 
 
 def generate(history: list[dict], today: dt.date) -> tuple[Deck, str, dict]:
