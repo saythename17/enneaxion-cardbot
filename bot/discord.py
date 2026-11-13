@@ -17,7 +17,8 @@ def community_post(deck: Deck) -> str:
     lines = [deck.hook_line1, deck.hook_line2, ""]
     lines += deck.summary_bullets
     lines += ["", f"💬 {deck.engagement_question}", ""]
-    lines.append(f"📮 더 깊은 이야기는 뉴스레터 「{NEWSLETTER}」에서 이어갈게요.")
+    lines.append(f"📮 {deck.newsletter_teaser}")
+    lines.append(f"👉 뉴스레터 「{NEWSLETTER}」 (프로필 링크)")
     lines.append(" ".join(deck.hashtags))
     return "\n".join(lines)
 

@@ -59,7 +59,7 @@ class Bar(BaseModel):
 
 
 class Card(BaseModel):
-    pattern: Literal["cover", "compare", "vs", "chips", "list", "stat", "conclusion"]
+    pattern: Literal["cover", "compare", "vs", "chips", "list", "stat", "term", "conclusion"]
     title: str = Field(description="cover: 3줄(\\n 구분) 질문형. 그 외: 최대 2줄. [[핵심어]] 형광펜 한 군데 + 끝에 감정 이모지 하나")
     highlight_color: Optional[Literal["yellow", "orange", "green"]] = "yellow"
     subtitle: Optional[str] = Field(None, description="cover 전용 작은 부제. 예) '💘 연애심리 연구'")
@@ -69,8 +69,13 @@ class Card(BaseModel):
     items: Optional[List[Item]] = Field(None, description="list: 정확히 3개")
     stat_big: Optional[str] = Field(None, description="stat: 큰 숫자. 예) '5:1'")
     stat_caption: Optional[str] = Field(None, description="stat: 숫자 아래 한 줄")
+    term: Optional[str] = Field(None, description="term: 용어 이름(10자 이내). 예) '부정 편향'")
+    term_origin: Optional[str] = Field(None, description="term: 원어 표기(선택). 예) 'Negativity Bias'")
+    term_def: Optional[str] = Field(None, description="term: 한 줄 뜻풀이(25자 안팎, 쉬운 말)")
+    term_example: Optional[str] = Field(None, description="term: 일상 속 장면 한 줄. 예) '칭찬 9개보다 지적 1개가 오래 남는 것'")
     bars: Optional[List[Bar]] = Field(None, description="conclusion: 막대 비교 2~4개 (선택)")
     message: Optional[str] = Field(None, description="conclusion: 네이비 박스 핵심 한 문장. '결론:'으로 시작, 청유형 마무리, 핵심어 {{ }}")
+    comment_prompt: Optional[str] = Field(None, description="conclusion 전용: 결론 박스 아래 댓글 유도 한 줄(25자 이내, 고르기 쉬운 질문). 예) '💬 나는 A파? B파? 댓글로!'")
     source: Optional[str] = Field(None, description="출처 한 줄(저자, 연도, 매체/책). 해석만 있는 카드는 null")
 
 
@@ -87,7 +92,8 @@ class Deck(BaseModel):
     hook_line1: str = Field(description="게시글 1줄: 독자가 들어봤을 통념")
     hook_line2: str = Field(description="게시글 2줄: 그걸 뒤집는 숫자나 반전")
     summary_bullets: List[str] = Field(description="본문 3~4줄, 각 줄 이모지로 시작")
-    engagement_question: str = Field(description="댓글로 자기 사례·썰·의견을 나누게 만드는 질문 1개")
+    engagement_question: str = Field(description="댓글 유도 질문 1개: 고르기 쉬운 선택지(A vs B, 내 유형은?) + 썰 초대")
+    newsletter_teaser: str = Field(description="뉴스레터에서 더 다룰 내용을 궁금하게 만드는 한 줄 예고. 예) '그럼 9번은 왜 유독 이 신호를 놓칠까요? 유형별 해석은 뉴스레터에서'")
     hashtags: List[str] = Field(description="해시태그 3~5개, # 포함")
     instagram_hashtags: List[str] = Field(description="인스타용 추가 해시태그 8~12개, # 포함")
     sources: List[SourceRef] = Field(description="카드에 쓴 자료의 원문 링크")

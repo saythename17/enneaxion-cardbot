@@ -84,6 +84,14 @@ body {{ font-family: 'NSK', 'Noto Color Emoji', sans-serif; color: {C['navy']}; 
 .stat .big {{ font-family: 'BHS', 'Noto Color Emoji'; font-size: 190px; line-height: 1.05; }}
 .stat .cap {{ font-family: 'BHS', 'Noto Color Emoji'; font-size: 48px; margin-top: 18px; line-height: 1.3; }}
 
+/* term */
+.term {{ padding: 48px 52px; }}
+.term .tl {{ font-weight: 900; font-size: 26px; color: {C['sub']}; }}
+.term .tn {{ font-family: 'BHS', 'Noto Color Emoji'; font-size: 92px; line-height: 1.15; margin-top: 8px; }}
+.term .to {{ font-weight: 700; font-size: 28px; color: {C['sub']}; margin-top: 4px; }}
+.term .td {{ font-family: 'BHS', 'Noto Color Emoji'; font-size: 46px; line-height: 1.35; margin-top: 30px; padding-top: 30px; border-top: 4px dashed {C['gray']}; text-wrap: pretty; }}
+.term .te {{ margin-top: 26px; background: {C['bg']}; border-radius: 22px; padding: 22px 28px; font-weight: 700; font-size: 30px; line-height: 1.45; text-wrap: pretty; }}
+
 /* conclusion */
 .bars {{ padding: 34px 40px; display: flex; flex-direction: column; gap: 22px; margin-bottom: 28px; }}
 .bar {{ display: flex; align-items: center; gap: 20px; }}
@@ -94,6 +102,8 @@ body {{ font-family: 'NSK', 'Noto Color Emoji', sans-serif; color: {C['navy']}; 
 .msg, .question, .rowtext, .main {{ text-wrap: pretty; }}
 .msg {{ background: {C['navy']}; color: #fff; border-radius: 30px; padding: 44px 48px; font-family: 'BHS', 'Noto Color Emoji'; font-size: 54px; line-height: 1.35; }}
 .msg .y {{ color: {C['yellow']}; }}
+.cp {{ margin-top: 24px; text-align: center; font-family: 'BHS', 'Noto Color Emoji'; font-size: 40px; }}
+.cp span {{ background: {C['yellow']}; border-radius: 999px; padding: 10px 34px 14px; display: inline-block; }}
 """
 
 # 렌더 후 넘침을 줄이고(글자 크기 축소), 그래도 넘치면 경고를 돌려준다.
@@ -193,6 +203,11 @@ def _content(card: Card) -> str:
         return f'<div class="list">{its}</div>'
     if p == "stat":
         return f'<div class="box stat"><div class="big fit">{fmt(card.stat_big)}</div><div class="cap">{fmt(card.stat_caption)}</div></div>'
+    if p == "term":
+        origin = f'<div class="to">{fmt(card.term_origin)}</div>' if card.term_origin else ""
+        ex = f'<div class="te">💬 {fmt(card.term_example)}</div>' if card.term_example else ""
+        return (f'<div class="box term"><div class="tl">📖 오늘의 용어</div><div class="tn fit">{fmt(card.term)}</div>{origin}'
+                f'<div class="td">{fmt(card.term_def)}</div>{ex}</div>')
     if p == "conclusion":
         out = ""
         if card.bars:
@@ -205,6 +220,8 @@ def _content(card: Card) -> str:
             )
             out += f'<div class="box bars">{rows}</div>'
         out += f'<div class="msg">{fmt(card.message)}</div>'
+        if card.comment_prompt:
+            out += f'<div class="cp"><span>{fmt(card.comment_prompt)}</span></div>'
         return f"<div>{out}</div>"
     return ""
 

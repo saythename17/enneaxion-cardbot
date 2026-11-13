@@ -1,34 +1,135 @@
 {
-  "topic": "가트맨 연구: 오래가는 커플은 '사소한 신호'에 반응한다",
-  "category": "연애심리",
-  "slug": "gottman-bids",
-  "cards": [
-    {"pattern": "cover", "subtitle": "💘 연애심리 연구", "title": "헤어질 커플은\n[[사소한 말]]에서\n티가 난다? 🤔", "question": "{t2} {t9}는 이 신호에 특히 민감해요", "highlight_color": "yellow"},
-    {"pattern": "stat", "title": "6년 뒤에도 함께인 커플의 [[비밀]] 😲", "stat_big": "86%", "stat_caption": "상대의 사소한 말에 반응한 비율", "source": "Gottman & Driver (2005), 신혼부부 관찰 연구 / The Relationship Cure (2001)"},
-    {"pattern": "vs", "title": "같은 신호, [[다른 반응]] 🤷", "highlight_color": "orange", "boxes": [
-      {"label": "💞 함께인 커플", "emoji": "🙌", "color": "green", "big": "86%", "sub": "돌아봐 주기"},
-      {"label": "💔 헤어진 커플", "emoji": "🙈", "color": "red", "big": "33%", "sub": "못 본 척하기"}],
-      "source": "Gottman Institute, 6년 추적 관찰(신혼부부 약 130쌍)"},
-    {"pattern": "compare", "title": "'저 새 좀 봐'에 대한 [[두 가지 답]] 🤔", "boxes": [
-      {"label": "🙆 다가가기", "rows": [{"badge": "💬 대답", "text": "오 진짜 예쁘다!"}, {"badge": "📈 결과", "text": "신뢰가 쌓이는 경향"}]},
-      {"label": "🙅 외면하기", "rows": [{"badge": "💬 대답", "text": "(폰만 봄)"}, {"badge": "📉 결과", "text": "말 걸기를 줄이는 경향"}]}],
-      "source": "Gottman, J. & DeClaire, J. (2001). The Relationship Cure"},
-    {"pattern": "list", "title": "오늘 바로 해볼 [[작은 반응]] 3가지 📏", "highlight_color": "green", "items": [
-      {"emoji": "👀", "color": "blue", "main": "눈 맞추고 한 마디", "sub": "\"그래? 왜?\" 한 번 더"},
-      {"emoji": "📱", "color": "purple", "main": "폰은 잠깐 내려놓기", "sub": "3초면 충분해요"},
-      {"emoji": "🫶", "color": "yellow", "main": "작은 말도 기억하기", "sub": "다음 날 다시 물어보기"}]},
-    {"pattern": "conclusion", "title": "큰 이벤트보다 [[매일의 반응]] 💡", "bars": [
-      {"label": "함께인 커플", "value": 86, "display": "86%", "color": "green"},
-      {"label": "헤어진 커플", "value": 33, "display": "33%"}],
-      "message": "결론: 사랑은 거창한 고백보다\n{{사소한 말에 돌아봐 주는 것}}부터 시작하자!",
-      "source": "Gottman & Driver (2005)"}
-  ],
-  "hook_line1": "연애는 큰 이벤트와 선물로 지켜진다고들 하죠.",
-  "hook_line2": "그런데 6년 뒤 갈린 커플의 차이는 '사소한 말에 반응한 비율' 86% vs 33%였어요.",
-  "summary_bullets": ["👀 오래가는 커플은 상대의 사소한 신호(bid)에 86% 반응", "💔 헤어진 커플은 33%만 반응", "🫶 눈 맞추기, 폰 내려놓기 같은 작은 반응이 신뢰를 만든다는 경향"],
-  "engagement_question": "여러분은 연인이 '저것 좀 봐!' 할 때 어떻게 반응하나요? 반대로 서운했던 순간이 있다면 댓글로 썰 풀어주세요 👇",
-  "hashtags": ["#연애심리", "#가트맨", "#에니어그램", "#관계심리"],
-  "instagram_hashtags": ["#연애", "#커플", "#연애상담", "#심리학", "#심리테스트", "#에니어그램유형", "#카드뉴스", "#관계", "#소통", "#연애팁"],
-  "sources": [{"title": "The Gottman Institute — Turn Toward Instead of Away", "url": "https://www.gottman.com/blog/turn-toward-instead-of-away/"}],
-  "fact_check_notes": ["86% / 33% 수치와 '6년' 추적 기간을 Gottman Institute 원문과 대조", "표본 수(약 130쌍) 확인"]
+ "topic": "가트맨 연구: 오래가는 커플은 '사소한 신호'에 반응한다",
+ "category": "연애심리",
+ "slug": "gottman-bids",
+ "cards": [
+  {
+   "pattern": "cover",
+   "subtitle": "💘 연애심리 연구",
+   "title": "6년 뒤 헤어질 커플,\n[[이 말]] 하나로\n갈렸다? 🤔",
+   "question": "{t2} {t9}라면 뜨끔할지도",
+   "highlight_color": "yellow"
+  },
+  {
+   "pattern": "list",
+   "title": "이런 순간, [[그냥]] 넘긴 적 있죠? 🤷",
+   "highlight_color": "orange",
+   "items": [
+    {
+     "emoji": "🐦",
+     "color": "blue",
+     "main": "\"저 새 좀 봐!\"",
+     "sub": "폰 보며 \"응\" 한마디"
+    },
+    {
+     "emoji": "🍜",
+     "color": "yellow",
+     "main": "\"오늘 점심 뭐 먹었게?\"",
+     "sub": "대충 \"글쎄\" 하고 끝"
+    },
+    {
+     "emoji": "📺",
+     "color": "purple",
+     "main": "\"이 장면 웃기지 않아?\"",
+     "sub": "듣는 둥 마는 둥"
+    }
+   ]
+  },
+  {
+   "pattern": "vs",
+   "title": "같은 신호, [[다른 반응]] 🤷",
+   "highlight_color": "orange",
+   "boxes": [
+    {
+     "label": "💞 함께인 커플",
+     "emoji": "🙌",
+     "color": "green",
+     "big": "86%",
+     "sub": "돌아봐 주기"
+    },
+    {
+     "label": "💔 헤어진 커플",
+     "emoji": "🙈",
+     "color": "red",
+     "big": "33%",
+     "sub": "못 본 척하기"
+    }
+   ],
+   "source": "Gottman Institute, 6년 추적 관찰(신혼부부 약 130쌍)"
+  },
+  {
+   "pattern": "stat",
+   "title": "6년 뒤에도 함께인 커플의 [[비밀]] 😲",
+   "stat_big": "86%",
+   "stat_caption": "상대의 사소한 말에 반응한 비율",
+   "source": "Gottman & Driver (2005), 신혼부부 관찰 연구 / The Relationship Cure (2001)"
+  },
+  {
+   "pattern": "term",
+   "title": "이 사소한 말에 [[이름]]이 있어요 📖",
+   "highlight_color": "green",
+   "term": "관계 신호",
+   "term_origin": "Bid for connection",
+   "term_def": "\"나 좀 봐줘\"를 돌려 말하는 작은 요청",
+   "term_example": "\"저 새 좀 봐!\"는 새가 아니라 '나랑 같이 봐줄래?'라는 뜻",
+   "source": "Gottman, J. & DeClaire, J. (2001). The Relationship Cure"
+  },
+  {
+   "pattern": "conclusion",
+   "title": "큰 이벤트보다 [[매일의 반응]] 💡",
+   "bars": [
+    {
+     "label": "함께인 커플",
+     "value": 86,
+     "display": "86%",
+     "color": "green"
+    },
+    {
+     "label": "헤어진 커플",
+     "value": 33,
+     "display": "33%"
+    }
+   ],
+   "message": "결론: 사랑은 거창한 고백보다\n{{사소한 말에 돌아봐 주는 것}}부터 시작하자!",
+   "source": "Gottman & Driver (2005)",
+   "comment_prompt": "💬 나는 돌아보는 편? 흘리는 편?"
+  }
+ ],
+ "hook_line1": "연인이 \"저 새 좀 봐!\" 했을 때, 여러분은 고개를 돌리나요?",
+ "hook_line2": "그런데 6년 뒤 함께인 커플과 헤어진 커플은 바로 이 순간에서 갈렸어요.",
+ "summary_bullets": [
+  "👀 오래가는 커플은 상대의 사소한 신호(bid)에 86% 반응",
+  "💔 헤어진 커플은 33%만 반응",
+  "🫶 눈 맞추기, 폰 내려놓기 같은 작은 반응이 신뢰를 만든다는 경향"
+ ],
+ "engagement_question": "나는 돌아보는 편 vs 흘려듣는 편? 반대로 내 말이 흘려졌을 때 서운했던 썰도 풀어주세요 👇",
+ "hashtags": [
+  "#연애심리",
+  "#가트맨",
+  "#에니어그램",
+  "#관계심리"
+ ],
+ "instagram_hashtags": [
+  "#연애",
+  "#커플",
+  "#연애상담",
+  "#심리학",
+  "#심리테스트",
+  "#에니어그램유형",
+  "#카드뉴스",
+  "#관계",
+  "#소통",
+  "#연애팁"
+ ],
+ "sources": [
+  {
+   "title": "The Gottman Institute — Turn Toward Instead of Away",
+   "url": "https://www.gottman.com/blog/turn-toward-instead-of-away/"
+  }
+ ],
+ "fact_check_notes": [
+  "86% / 33% 수치와 '6년' 추적 기간을 Gottman Institute 원문과 대조",
+  "표본 수(약 130쌍) 확인"
+ ],
+ "newsletter_teaser": "그럼 왜 어떤 유형은 이 신호를 유독 잘 놓칠까요? 유형별 해석은 이번 주 뉴스레터에서 풀어볼게요"
 }
