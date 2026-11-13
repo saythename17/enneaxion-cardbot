@@ -61,12 +61,14 @@ def _chunks(text: str, limit: int = 1900) -> List[str]:
     return out
 
 
-def send(webhook_url: str, deck: Deck, images: List[Path], warnings: List[str], date_str: str) -> None:
+def send(webhook_url: str, deck: Deck, images: List[Path], warnings: List[str], date_str: str, design_url: str | None = None) -> None:
     header = (
         f"## ☀️ {date_str} 오늘의 카드뉴스\n"
         f"**[{deck.category}] {deck.topic}**\n"
         f"카드 {len(images)}장 · 아래 문구를 복사해서 올리세요"
     )
+    if design_url:
+        header += f"\n✏️ 문구 직접 수정하기 (Claude Design): <{design_url}>"
     _post(webhook_url, {"content": header, "username": "에니어시온 카드뉴스봇"}, images[:10])
 
     post = community_post(deck)

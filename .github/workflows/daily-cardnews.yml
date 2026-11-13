@@ -1,16 +1,23 @@
 name: 매일 아침 카드뉴스
 
+# 08:00 KST  생성: 주제 조사 → 카드 작성 → latest/ 커밋 (Claude 예약 작업이 이걸로 Claude Design 페이지를 갱신)
+# 09:00 KST  전송: latest/ 덱을 렌더해서 디스코드로 (Design 페이지 링크 포함)
+# GitHub 예약 실행은 몇~수십 분 늦을 수 있음
 on:
   schedule:
-    - cron: "0 0 * * *"   # 매일 00:00 UTC = 09:00 KST (GitHub 사정으로 몇~수십 분 늦을 수 있음)
-  workflow_dispatch:       # Actions 탭에서 수동 실행
+    - cron: "0 23 * * *"   # 08:00 KST 생성
+    - cron: "0 0 * * *"    # 09:00 KST 전송
+  workflow_dispatch:       # 수동 실행: 생성 + 전송을 한 번에
 
 permissions:
-  contents: write          # data/history.json(다룬 주제 기록) 커밋용
+  contents: write
 
 concurrency:
   group: daily-cardnews
   cancel-in-progress: false
+
+env:
+  DESIGN_URL: https://claude.ai/artifact/RHcgwasJ5Gf2FMW6c5cUVm
 
 jobs:
   run:
@@ -18,6 +25,13 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+
+      - name: 단계 결정
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "gen=1" >> $GITHUB_OUTPUT; echo "send=1" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 23 * * *" ]; then echo "gen=1" >> $GITHUB_OUTPUT
+          else echo "send=1" >> $GITHUB_OUTPUT; fi
 
       - uses: actions/setup-python@v5
         with:
@@ -30,11 +44,30 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
 
-      - name: 카드뉴스 생성 + 디스코드 전송
+      - name: 생성 (조사 → 카드 작성 → latest/ 저장)
+        if: steps.mode.outputs.gen == '1'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python main.py --no-discord --save-latest
+
+      - name: latest/ 와 주제 기록 커밋
+        if: steps.mode.outputs.gen == '1'
+        run: |
+          git config user.name "cardnews-bot"
+          git config user.email "cardnews-bot@users.noreply.github.com"
+          git add data/history.json latest/
+          git diff --cached --quiet || (git commit -m "chore: $(TZ=Asia/Seoul date +%F) 카드뉴스 생성" && git push)
+
+      - name: 전송 (latest/ → 디스코드)
+        if: steps.mode.outputs.send == '1'
+        env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python main.py
+        run: |
+          git pull --ff-only || true
+          today=$(TZ=Asia/Seoul date +%F)
+          made=$(python -c "import json;print(json.load(open('latest/meta.json'))['date'])" 2>/dev/null || echo none)
+          if [ "$made" != "$today" ]; then echo "오늘($today) 생성분이 없습니다 (latest=$made)"; exit 1; fi
+          python main.py --deck latest/deck.json
 
       - name: 결과물 보관 (Actions 아티팩트, 30일)
         if: always()
@@ -43,13 +76,7 @@ jobs:
           name: cardnews-${{ github.run_id }}
           path: output/
           retention-days: 30
-
-      - name: 다룬 주제 기록 커밋
-        run: |
-          git config user.name "cardnews-bot"
-          git config user.email "cardnews-bot@users.noreply.github.com"
-          git add data/history.json
-          git diff --cached --quiet || (git commit -m "chore: 오늘 카드뉴스 주제 기록" && git push)
+          if-no-files-found: ignore
 
       - name: 실패 알림
         if: failure()
@@ -57,5 +84,5 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           curl -sS -H "Content-Type: application/json" \
-            -d "{\"content\":\"⚠️ 오늘 카드뉴스 생성 실패: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+            -d "{\"content\":\"⚠️ 오늘 카드뉴스 실패: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
             "$DISCORD_WEBHOOK_URL"

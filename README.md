@@ -6,13 +6,14 @@
 ## 흐름
 
 ```
-GitHub Actions (매일 00:00 UTC = 09:00 KST)
-  └ main.py
+08:00 KST  GitHub Actions 생성 단계 (main.py --no-discord --save-latest)
      ① 주제 선정 + 자료 조사   Claude(웹 검색·원문 확인)  → research_notes.md
-     ② 카드·문구 작성          Claude(구조화 출력)         → deck.json
-     ③ 카드 렌더링             HTML/CSS → Chromium → PNG  → card_01~07.png
-     ④ 디스코드 전송           카드 이미지 + 커뮤니티 게시글 + 인스타 캡션 + 팩트체크 목록
-     ⑤ data/history.json 에 오늘 주제 기록 (다음 날 중복 방지)
+     ② 카드·문구 작성          Claude(JSON + 규칙 검사)    → deck.json
+     ③ 카드 렌더링             HTML/CSS → Chromium → PNG + Claude Design 캔버스 파일
+     ④ latest/ 와 data/history.json 커밋 (다음 날 주제 중복 방지)
+08:47 KST  Claude 예약 작업: latest/design 으로 Claude Design 페이지 갱신 (문구 직접 수정용)
+09:00 KST  GitHub Actions 전송 단계 (main.py --deck latest/deck.json)
+     ⑤ 디스코드: 카드 이미지 + Design 페이지 링크 + 커뮤니티 게시글 + 인스타 캡션 + 팩트체크 목록
 ```
 
 - **카드 흐름**: 1장 궁금증(답 안 줌) → 2장 공감·통념 → 3~4장 반전과 근거(숫자·실험) → 용어 카드 1장(쉬운 뜻 + 일상 예시) → 결론 + 댓글 질문. 게시글 끝에는 카드에서 남겨둔 질문으로 뉴스레터 예고.
@@ -20,6 +21,12 @@ GitHub Actions (매일 00:00 UTC = 09:00 KST)
 - **주제 다양화**: 카테고리는 날짜로 연애심리 → 심리학 → 에니어그램 순환, 접근 방식(최신 연구 / 고전 실험 / 책 / 통계 / 작품·현상 읽기 / 통념 뒤집기)은 최근 4번과 겹치지 않게 무작위. 최근 60개 주제는 피하도록 지시.
 - **댓글 유도**: 게시글 마지막에 자기 썰·유형 경험을 꺼내게 하는 질문 1개, 표지에 유형 알약으로 에니어그램 독자 끌어들이기.
 - **정확성**: 원문에서 확인한 숫자만 쓰고, 디스코드 마지막 메시지에 대조할 숫자·원문 링크 목록을 같이 보냅니다. 올리기 전 확인은 사람이 합니다(자동 업로드 없음).
+
+## 문구 직접 수정 (Claude Design)
+
+https://claude.ai/artifact/RHcgwasJ5Gf2FMW6c5cUVm — 매일 아침 그날 카드로 바뀌는 고정 링크입니다.
+카드 글자를 클릭해서 바로 고치고, 오른쪽 메모에서 게시글·인스타 캡션도 고칠 수 있어요.
+다음 날 아침 새 카드로 덮어쓰니, 고친 결과는 그날 안에 내려받아 두세요.
 
 ## 설치 (한 번만)
 
@@ -31,7 +38,7 @@ GitHub Actions (매일 00:00 UTC = 09:00 KST)
    - `DISCORD_WEBHOOK_URL`
 5. Actions 탭 → 「매일 아침 카드뉴스」 → **Run workflow** 로 한 번 시험 실행.
 
-이후 매일 자동 실행됩니다. GitHub 예약 실행은 서버 사정으로 몇 분~수십 분 늦을 수 있어요.
+이후 매일 자동 실행됩니다(08:00 생성, 09:00 디스코드). GitHub 예약 실행은 서버 사정으로 몇 분~수십 분 늦을 수 있어요.
 
 ## 로컬 실행
 

@@ -256,13 +256,14 @@ def _launch(p):
     return p.chromium.launch(executable_path=exe) if exe else p.chromium.launch()
 
 
-def render_deck(deck: Deck, out_dir: Path) -> tuple[List[Path], List[str]]:
+def render_deck(deck: Deck, out_dir: Path) -> tuple[List[Path], List[str], List[str]]:
+    """PNG 경로, 넘침 경고, 자동 축소가 반영된 카드 HTML(.card 요소, Claude Design 캔버스용)을 돌려준다."""
     from playwright.sync_api import sync_playwright
 
     out_dir = Path(out_dir).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
     total = len(deck.cards)
-    paths, warnings = [], []
+    paths, warnings, fitted = [], [], []
     with sync_playwright() as p:
         browser = _launch(p)
         page = browser.new_page(viewport={"width": 1080, "height": 1080}, device_scale_factor=1)
@@ -273,8 +274,9 @@ def render_deck(deck: Deck, out_dir: Path) -> tuple[List[Path], List[str]]:
             page.evaluate("document.fonts.ready")
             for w in page.evaluate(FIT_JS):
                 warnings.append(f"{i}장: {w}")
+            fitted.append(page.evaluate("document.querySelector('.card').outerHTML"))
             png = out_dir / f"card_{i:02d}.png"
             page.screenshot(path=str(png), clip={"x": 0, "y": 0, "width": 1080, "height": 1080})
             paths.append(png)
         browser.close()
-    return paths, warnings
+    return paths, warnings, fitted
