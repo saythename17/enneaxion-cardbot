@@ -1,0 +1,4 @@
+anthropic>=2.8.0
+pydantic>=2.7
+playwright>=1.48
+requests>=2.32
