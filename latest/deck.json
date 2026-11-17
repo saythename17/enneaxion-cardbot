@@ -1,14 +1,14 @@
 {
- "topic": "반대하는 연애일수록 더 애틋할까? 로미오와 줄리엣 효과(1972)와 40여 년 뒤 재조사(2014)",
- "category": "심리학",
- "slug": "romeo-juliet-effect-recheck",
+ "topic": "10년 전의 나와 지금의 나, 같은 유형일까? 성격은 서른이면 굳는다는 통념과 20~40세 성격 변화 데이터",
+ "category": "에니어그램",
+ "slug": "personality-change-20-40",
  "cards": [
   {
    "pattern": "cover",
-   "title": "\"걔는 아니야\"\n그 말을 들은 밤\n왜 [[더 애틋할까]]? 🤔",
+   "title": "검사할 때마다\n번호가 달라요\n[[내가 변한 걸까]]? 🤔",
    "highlight_color": "yellow",
-   "subtitle": "💘 연애심리 연구 다시 보기",
-   "question": "{t4} {t8} 반대받을수록 끌리는 나, 왜일까?",
+   "subtitle": "🧭 에니어그램 × 성격 변화 연구",
+   "question": "3년 전엔 {t7}, 지금은 {t6}… 왜일까?",
    "boxes": null,
    "groups": null,
    "items": null,
@@ -24,33 +24,51 @@
    "source": null
   },
   {
-   "pattern": "list",
-   "title": "반대받을수록\n[[더 끌린 적]] 있죠? 😳",
+   "pattern": "compare",
+   "title": "서른 넘으면 성격은\n[[굳는다]]던데? 🤔",
    "highlight_color": "orange",
    "subtitle": null,
    "question": null,
-   "boxes": null,
-   "groups": null,
-   "items": [
+   "boxes": [
     {
-     "emoji": "📞",
-     "color": "blue",
-     "main": "통화가 한 시간 더 길어짐",
-     "sub": "엄마가 반대한 그날 밤"
+     "label": "🤔 우리가 믿는 말",
+     "emoji": null,
+     "type": null,
+     "color": null,
+     "big": null,
+     "sub": null,
+     "rows": [
+      {
+       "badge": "🧱 서른",
+       "text": "성격은 석고처럼 굳어버린다"
+      },
+      {
+       "badge": "💔 연애",
+       "text": "사람 고쳐 쓰는 거 아니다"
+      }
+     ]
     },
     {
-     "emoji": "🛡️",
-     "color": "purple",
-     "main": "괜히 애인 편을 들게 됨",
-     "sub": "단톡방 '헤어져' 합창 뒤"
-    },
-    {
-     "emoji": "📺",
-     "color": "orange",
-     "main": "'진짜 사랑은 저래야지'",
-     "sub": "반대 이긴 드라마 커플 보며"
+     "label": "❓ 그런데 왜",
+     "emoji": null,
+     "type": null,
+     "color": null,
+     "big": null,
+     "sub": null,
+     "rows": [
+      {
+       "badge": "🎓 동창회",
+       "text": "너 왜 이렇게 차분해졌어?"
+      },
+      {
+       "badge": "📝 재검사",
+       "text": "그때 내가 잘못 체크했나?"
+      }
+     ]
     }
    ],
+   "groups": null,
+   "items": null,
    "stat_big": null,
    "stat_caption": null,
    "term": null,
@@ -64,15 +82,15 @@
   },
   {
    "pattern": "stat",
-   "title": "'로미오와 줄리엣 효과'\n[[지금도 맞을까]]? 🤔",
+   "title": "오히려 [[이 나이]]에\n성격이 자라요 😲",
    "highlight_color": "yellow",
    "subtitle": null,
    "question": null,
    "boxes": null,
    "groups": null,
    "items": null,
-   "stat_big": "140쌍",
-   "stat_caption": "1972년 커플 조사, 부모가 간섭할수록 사랑도 큰 경향",
+   "stat_big": "20~40세",
+   "stat_caption": "같은 사람을 오래 추적한 92개 표본을 모아 보니, 성숙 쪽 변화가 특히 두드러진 시기",
    "term": null,
    "term_origin": null,
    "term_def": null,
@@ -80,92 +98,74 @@
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": "Driscoll, Davis & Lipetz (1972), Journal of Personality and Social Psychology 24(1):1–10"
+   "source": "Roberts, Walton, Viechtbauer (2006), Psychological Bulletin 132(1), 1–25"
   },
   {
-   "pattern": "vs",
-   "title": "40여 년 뒤 재조사\n결과는 [[증거 없음]] 😲",
+   "pattern": "chips",
+   "title": "20~40세엔 [[성실함]]이\n쑥 올라가는 경향 💡",
    "highlight_color": "green",
    "subtitle": null,
    "question": null,
-   "boxes": [
+   "boxes": null,
+   "groups": [
     {
-     "label": "📚 1972년 조사",
-     "emoji": "🔥",
-     "type": null,
-     "color": "orange",
-     "big": "140쌍",
-     "sub": "간섭할수록 사랑이 커짐",
-     "rows": null
-    },
-    {
-     "label": "🔬 2014년 재조사",
-     "emoji": "🧊",
+     "label": "📈 20~40세에 특히 오름",
      "type": null,
      "color": "blue",
-     "big": "396명",
-     "sub": "3~4개월 추적, 효과 못 찾음",
-     "rows": null
-    }
-   ],
-   "groups": null,
-   "items": null,
-   "stat_big": null,
-   "stat_caption": null,
-   "term": null,
-   "term_origin": null,
-   "term_def": null,
-   "term_example": null,
-   "bars": null,
-   "message": null,
-   "comment_prompt": null,
-   "source": "Driscoll 외 (1972) JPSP 24(1) / Sinclair, Hood & Wright (2014) Social Psychology 45(3):170–178 / FORRT FLoRA 재현 실패 기록"
-  },
-  {
-   "pattern": "compare",
-   "title": "알고 보니 관계는\n[[응원]]과 함께 갔다 💡",
-   "highlight_color": "yellow",
-   "subtitle": null,
-   "question": null,
-   "boxes": [
-    {
-     "label": "🤔 통념",
-     "emoji": null,
-     "type": null,
-     "color": null,
-     "big": null,
-     "sub": null,
-     "rows": [
+     "chips": [
       {
-       "badge": "🚫 반대받으면",
-       "text": "사랑이 더 강해진다"
+       "icon": "🗓️",
+       "name": "성실함",
+       "value": null,
+       "highlight": true
+      },
+      {
+       "icon": "🧘",
+       "name": "마음의 안정",
+       "value": null,
+       "highlight": true
+      },
+      {
+       "icon": "🙋",
+       "name": "이끄는 힘",
+       "value": null,
+       "highlight": true
       }
      ]
     },
     {
-     "label": "🔬 다시 해 본 연구들",
-     "emoji": null,
+     "label": "🎢 10대에 오르고 노년에 내림",
      "type": null,
-     "color": null,
-     "big": null,
-     "sub": null,
-     "rows": [
+     "color": "purple",
+     "chips": [
       {
-       "badge": "🚫 반대받으면",
-       "text": "관계가 나빠지는 경향"
+       "icon": "🎨",
+       "name": "새로움 추구",
+       "value": null,
+       "highlight": false
       },
       {
-       "badge": "🤝 응원받으면",
-       "text": "관계가 좋아지는 경향"
-      },
+       "icon": "⚡",
+       "name": "사회적 활력",
+       "value": null,
+       "highlight": false
+      }
+     ]
+    },
+    {
+     "label": "🌙 노년기에만 움직임",
+     "type": null,
+     "color": "gray",
+     "chips": [
       {
-       "badge": "👫 친구는 응원",
-       "text": "가족만 반대면 큰 차이 없음"
+       "icon": "🤝",
+       "name": "다정함",
+       "value": null,
+       "highlight": false
       }
      ]
     }
    ],
-   "groups": null,
    "items": null,
    "stat_big": null,
    "stat_caption": null,
@@ -176,12 +176,12 @@
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": "Sinclair, Hood & Wright (2014) Social Psychology 45(3) / 친구·가족 결과: Sinclair & Ellithorpe 후속 연구 요약(In-Mind)"
+   "source": "Roberts, Walton, Viechtbauer (2006), Psychological Bulletin 132(1), 1–25"
   },
   {
    "pattern": "term",
-   "title": "그런데 왜 그렇게\n[[애틋하게]] 느껴질까? 🤔",
-   "highlight_color": "orange",
+   "title": "다들 조금씩\n[[어른 쪽]]으로 움직여요 💡",
+   "highlight_color": "yellow",
    "subtitle": null,
    "question": null,
    "boxes": null,
@@ -189,10 +189,67 @@
    "items": null,
    "stat_big": null,
    "stat_caption": null,
-   "term": "심리적 반발",
-   "term_origin": "Psychological Reactance",
-   "term_def": "내 선택을 막으면, 막힌 쪽이 더 끌리는 마음",
-   "term_example": "'걔 만나지 마' 들으면 괜히 더 연락하고 싶은 것",
+   "term": "성숙 원칙",
+   "term_origin": "Maturity Principle",
+   "term_def": "나이 들며 더 성실하고 덜 불안해지는 경향",
+   "term_example": "마감 전날 밤샘하던 친구가 직장 3년 차에 일정표를 쓰는 것",
+   "bars": null,
+   "message": null,
+   "comment_prompt": null,
+   "source": "성숙 원칙(Maturity Principle): Caspi, Roberts, Shiner 등이 정리한 개념"
+  },
+  {
+   "pattern": "compare",
+   "title": "번호가 아니라\n[[내 상태]]가 바뀐 걸지도? 🤷",
+   "highlight_color": "orange",
+   "subtitle": null,
+   "question": null,
+   "boxes": [
+    {
+     "label": "📖 에니어그램 이론에선",
+     "emoji": null,
+     "type": null,
+     "color": null,
+     "big": null,
+     "sub": null,
+     "rows": [
+      {
+       "badge": "🔢 번호",
+       "text": "기본 유형은 평생 그대로라고 봐요"
+      },
+      {
+       "badge": "🌱 변화",
+       "text": "움직이는 건 성장의 정도예요"
+      }
+     ]
+    },
+    {
+     "label": "🔍 그래서 이럴 수도?",
+     "emoji": null,
+     "type": null,
+     "color": null,
+     "big": null,
+     "sub": null,
+     "rows": [
+      {
+       "badge": "🎈 진득해진 {t7}",
+       "text": "검사에선 {t1}처럼 보일지도"
+      },
+      {
+       "badge": "🛡️ 덜 불안한 {t6}",
+       "text": "검사에선 {t9}처럼 보일지도"
+      }
+     ]
+    }
+   ],
+   "groups": null,
+   "items": null,
+   "stat_big": null,
+   "stat_caption": null,
+   "term": null,
+   "term_origin": null,
+   "term_def": null,
+   "term_example": null,
    "bars": null,
    "message": null,
    "comment_prompt": null,
@@ -200,7 +257,7 @@
   },
   {
    "pattern": "conclusion",
-   "title": "불타는 느낌과\n[[오래가는 사랑]]은 달라요 💡",
+   "title": "성격은 굳는 게 아니라\n[[자라는 중]] 💡",
    "highlight_color": "green",
    "subtitle": null,
    "question": null,
@@ -214,78 +271,58 @@
    "term_def": null,
    "term_example": null,
    "bars": null,
-   "message": "결론: 반대 속 애틋함보다 관계를 {{응원해 주는 내 편}}을 챙기자!",
-   "comment_prompt": "💬 반대받은 연애, 더 불탔다? 식었다?",
+   "message": "결론: 변해도 나다움은 남으니, 예전 검사 결과는 {{지금의 나}}로 다시 보자!",
+   "comment_prompt": "💬 10년 전 나와 지금, 딴사람? 그대로?",
    "source": null
   }
  ],
- "hook_line1": "엄마가 \"걔는 아니야\" 한 날, 이상하게 더 애틋해진 적 있나요?",
- "hook_line2": "그런데 '반대할수록 사랑이 불탄다'는 그 유명한 연구, 40여 년 뒤 다시 해 보니…",
+ "hook_line1": "\"서른 넘으면 성격 안 변해\", \"사람 고쳐 쓰는 거 아니다\" 많이 들어 보셨죠?",
+ "hook_line2": "그런데 같은 사람을 오래 추적한 연구들을 모아 보니, 오히려 '그 나이'가 이상한 구간이었어요…",
  "summary_bullets": [
-  "📚 1972년 커플 140쌍 조사에서 '부모가 간섭할수록 사랑도 커진다'는 결과가 나왔어요",
-  "🔬 2014년, 같은 설문으로 약 400명(396명)을 3~4개월 추적했더니 그 효과의 증거는 찾지 못했어요",
-  "🤝 오히려 주변이 응원할수록 관계가 좋아지는 쪽과 맞아떨어졌어요 (추적 조사라 원인까지는 말할 수 없어요)",
-  "💡 심리적 반발: 내 선택을 막으면 막힌 쪽이 더 끌리는 마음. 애틋함은 진짜지만, 오래가는 사랑의 증거는 아니에요"
+  "🧱 '서른이면 성격이 굳는다'는 통념, 데이터로 확인해 봤어요",
+  "📈 92개 표본 분석: 성실함·마음의 안정은 특히 20~40세에 올라가는 경향",
+  "🔢 에니어그램 번호가 바뀌었다면, 유형보다 내 상태가 움직였을 수도 있어요",
+  "💡 성숙 원칙: 나이 들며 대부분 조금씩 더 성실하고 덜 불안해지는 경향"
  ],
- "engagement_question": "주변이 반대했던 연애, 결과는 어땠나요? A) 더 불탔다가 결국 이별 B) 더 불탔고 아직 함께 C) 반대 듣고 마음이 식음 D) 반대받아 본 적 없음. 알파벳이랑 내 에니어그램 유형 남기고 썰 풀어주세요! 4번 개인주의자, 8번 도전가는 특히 공감할지도?",
- "newsletter_teaser": "친구들의 반대는 내 연애를 망치는 소음일까요, 내가 못 보는 걸 보여주는 경고등일까요? 언제 귀 기울이고 언제 흘려들어야 할지, 뉴스레터에서 풀어볼게요.",
+ "engagement_question": "10년 전의 나와 지금의 나, 어느 쪽인가요? A. 완전 딴사람 B. 본질은 그대로, 포장만 바뀜 C. 오히려 더 나다워짐. 검사 번호가 바뀐 적 있다면 몇 번에서 몇 번으로 바뀌었는지 썰 풀어주세요!",
+ "newsletter_teaser": "저절로 변하는 것 말고, 내가 마음먹으면 성격은 정말 바뀔까요? 연인이 바꿔 달라고 할 때의 노력은 오래갈까요? 뉴스레터에서 풀어볼게요.",
  "hashtags": [
-  "#에니어시온",
-  "#연애심리",
-  "#로미오와줄리엣효과",
-  "#심리학",
-  "#에니어그램"
+  "#에니어그램",
+  "#성격변화",
+  "#성숙원칙",
+  "#에니어시온"
  ],
  "instagram_hashtags": [
-  "#심리적반발",
-  "#부모반대",
-  "#반대하는연애",
-  "#연애고민",
-  "#심리학연구",
-  "#재현실패",
-  "#카드뉴스",
   "#에니어그램유형",
-  "#4번유형",
-  "#8번유형",
-  "#연애상담"
+  "#성격심리학",
+  "#심리학카드뉴스",
+  "#사람은안변한다",
+  "#서른",
+  "#자기이해",
+  "#성격검사",
+  "#빅파이브",
+  "#심리테스트",
+  "#나다움",
+  "#성장"
  ],
  "sources": [
   {
-   "title": "Driscoll, Davis & Lipetz (1972). Parental interference and romantic love: The Romeo and Juliet effect. JPSP 24(1):1–10 (Ovid 초록)",
-   "url": "https://www.ovid.com/journals/jpspy/abstract/00005205-197210000-00001"
-  },
-  {
-   "title": "Sinclair, Hood & Wright (2014). Revisiting the Romeo and Juliet effect. Social Psychology 45(3):170–178 (Hogrefe)",
-   "url": "https://econtent.hogrefe.com/doi/10.1027/1864-9335/a000181"
-  },
-  {
-   "title": "Sinclair, Hood & Wright (2014) 원문 PDF (APA PsycNet)",
-   "url": "https://psycnet.apa.org/fulltext/2014-20922-005.pdf"
-  },
-  {
-   "title": "FORRT FLoRA 재현연구 데이터베이스: Driscoll 외 (1972) 재현 실패 기록",
-   "url": "https://forrt.org/flora-replication-atlas/doi/10.1037/h0033373/"
-  },
-  {
-   "title": "In-Mind 블로그: Does parental disapproval lead to love or dissolution? (후속 연구 요약, 2차 자료)",
-   "url": "https://www.in-mind.org/blog/post/does-parental-disapproval-lead-to-love-or-dissolution-the-romeo-and-juliet-effect-vs-the"
+   "title": "Roberts, Walton, Viechtbauer (2006). Patterns of mean-level change in personality traits across the life course: A meta-analysis of longitudinal studies. Psychological Bulletin 132(1), 1–25",
+   "url": "https://eric.ed.gov/?id=EJ735270"
   }
  ],
  "fact_check_notes": [
-  "[3·4장] 1972년 연구 표본 '커플 140쌍': Ovid 초록 원문과 대조 (검색 결과로만 확인함)",
-  "[3·4장] 1972년 결과 방향 '부모 간섭이 클수록 사랑도 큰 경향': 리서치 노트 본문 서술과 In-Mind 2차 요약에 근거함. 원 논문 초록에서 표현을 직접 확인",
-  "[3·4장] 1972년 서지 정보 JPSP 24(1):1–10 확인",
-  "[4장·게시글] 2014년 표본 '396명', 추적 기간 '3~4개월': Hogrefe 초록과 APA 원문 PDF를 직접 열어 대조 (리서치 때 페이지 직접 열기 실패)",
-  "[4장] '1972년과 같은 측정 도구(설문)를 사용'했다는 주장: 2014년 논문 방법 부분에서 확인",
-  "[4장·게시글] '로미오와 줄리엣 효과의 증거를 찾지 못함' 문구: 2014년 논문 초록의 결론 문장과 대조",
-  "[4장] '40여 년 뒤' 표현: 1972년에서 2014년까지 42년이므로 맞는지 확인",
-  "[4장 source] FORRT FLoRA에 1972년 연구가 '재현 실패(replicated: failed)'로 기록된 상태인지 페이지에서 확인",
-  "[5장·게시글] '주변이 반대하면 관계가 나빠지고 응원하면 좋아지는 경향'(사회적 관계망 효과와 일치): 2014년 초록과 대조. 상관 연구이므로 인과 표현이 들어가지 않았는지 다시 확인",
-  "[5장] '친구는 응원하고 가족만 반대하면 모두 찬성일 때와 비슷': 공저자 측 In-Mind 요약(2차 자료)에만 근거함. 원문(Sinclair & Ellithorpe, Cambridge UP 단행본의 한 장)과 표본 수가 확인되지 않으면 이 행은 삭제하는 것을 권장",
-  "[6장] '심리적 반발' 개념 정의: 일반 학계 지식에 근거함. 기원(Brehm, 1966) 원문은 미확인이라 카드에 이름과 출처를 넣지 않음",
-  "[전체] 2014년 표본은 미국 온라인 패널(mTurk)임. 카드에는 국가를 쓰지 않았지만, 한국 상황으로 일반화하는 댓글 응대는 주의",
-  "[미사용·미확인] 1972년 기혼 91쌍·연애 49쌍 구성, 1972년 추적 간격 6~10개월, 2014년 2차 응답자 458명·기혼 48.5%, Felmlee(2001), Agnew 외(2001)는 카드와 게시글에 쓰지 않음",
-  "[해석] 커버의 {t4}·{t8} 알약과 게시글의 '4번 개인주의자, 8번 도전가는 특히 공감할지도'는 시온식 해석이고 연구 결과가 아님. 열린 표현이 유지됐는지 확인",
-  "[작업 메모] 리서치 세션에서 Hogrefe·APA 원문 페이지를 직접 열지 못했음. 업로드 전에 두 페이지를 직접 열어 위 숫자를 최종 확인"
+  "[3장·4장] '92개 표본' 메타분석인지 Roberts 외 2006 원문(Psychological Bulletin 132(1), 1–25) 초록과 대조 (노트상 ✅)",
+  "[3장] '20~40세에 특히 높아짐'이 사회적 주도성·성실성·정서적 안정성에 해당하는 결과인지 확인. 카드에서는 '성숙 쪽 변화가 특히 두드러진 시기'로 표현했으니, '가장 많이 변한다'로 읽혀도 무리가 없는지 점검",
+  "[4장] 개방성·사회적 활력은 청소년기에 오르고 노년기에 내려간다는 결과, 친화성은 노년기에만 변한다는 결과를 원문과 대조",
+  "[4장] 쉬운 말 번역 점검: 성실함=성실성, 마음의 안정=정서적 안정성, 이끄는 힘=사회적 주도성, 새로움 추구=개방성, 다정함=친화성",
+  "[5장] '성숙 원칙(Maturity Principle)'의 출처(Caspi·Roberts·Shiner 등)는 노트상 미열람. source 줄 표기가 맞는지 확인하고, 확인이 안 되면 source 줄을 수정",
+  "[5장] 성숙 원칙 뜻풀이 '더 성실하고 덜 불안해지는 경향'이 개념 정의와 맞는지 확인",
+  "[6장] '기본 유형은 평생 그대로, 움직이는 건 성장의 정도'는 에니어그램 이론(리소-허드슨 계열)의 주장이며 연구 결과가 아님. 카드에서 '이론에선'으로 표시했는지 확인",
+  "[6장] '진득해진 7번이 1번처럼, 덜 불안한 6번이 9번처럼 보일 수 있다'는 시온식 해석임. '~보일지도'처럼 열린 표현이 유지됐는지 확인",
+  "[7장] '변해도 나다움은 남는다'는 상대적 순위가 짧은 기간에는 비교적 유지된다는 노트 정리에 근거함. 표에는 출처가 없으므로 Roberts 2006 등 원문에서 뒷받침되는지 확인",
+  "[미사용] Soto 외 2011의 N=1,267,218, Harris 외 2016의 77세 추적 인원과 14세·77세 상관, Damian 외 2019의 50년 추적 인원과 결론 수치는 미확인(❌)이라 카드에 넣지 않음. 추가하려면 원문 확인이 먼저",
+  "[미사용] Project Talent 약 44만 명, 스코틀랜드 1,208명, Baranski 외 2021의 1만 3천여 명은 원문 미열람(🔶)이라 카드에 쓰지 않음. 뉴스레터에서 쓸 경우 원문 확인 필요",
+  "[전체] 빅파이브 연구들은 에니어그램 유형을 측정하지 않았음. 카드 어디에도 '연구가 유형 불변(또는 변화)을 증명했다'는 표현이 없는지 최종 확인"
  ]
 }
