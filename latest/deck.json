@@ -1,14 +1,14 @@
 {
- "topic": "10년 전의 나와 지금의 나, 같은 유형일까? 성격은 서른이면 굳는다는 통념과 20~40세 성격 변화 데이터",
- "category": "에니어그램",
- "slug": "personality-change-20-40",
+ "topic": "가트맨 『The Relationship Cure』의 '비드': 사소한 '저기 봐!'에 어떻게 반응하는지가 관계를 비춘다",
+ "category": "연애심리",
+ "slug": "bids-turning-toward",
  "cards": [
   {
    "pattern": "cover",
-   "title": "검사할 때마다\n번호가 달라요\n[[내가 변한 걸까]]? 🤔",
+   "title": "노을 사진에\n[['ㅇㅇ']]만 오면\n왜 이리 서운할까? 🤔",
    "highlight_color": "yellow",
-   "subtitle": "🧭 에니어그램 × 성격 변화 연구",
-   "question": "3년 전엔 {t7}, 지금은 {t6}… 왜일까?",
+   "subtitle": "💘 연애심리 · 책 한 권 핵심 개념",
+   "question": "한숨 보낸 {t4}, '응~' 넘긴 {t9}일 수도?",
    "boxes": null,
    "groups": null,
    "items": null,
@@ -24,14 +24,53 @@
    "source": null
   },
   {
-   "pattern": "compare",
-   "title": "서른 넘으면 성격은\n[[굳는다]]던데? 🤔",
+   "pattern": "list",
+   "title": "이런 순간,\n왜 [[유독 오래]] 남을까? 🥲",
    "highlight_color": "orange",
+   "subtitle": null,
+   "question": null,
+   "boxes": null,
+   "groups": null,
+   "items": [
+    {
+     "emoji": "🌇",
+     "color": "orange",
+     "main": "노을 사진에 'ㅇㅇ'",
+     "sub": "한참 뒤 온 두 글자"
+    },
+    {
+     "emoji": "👟",
+     "color": "blue",
+     "main": "'저기 봐!'에 '응…'",
+     "sub": "눈은 계속 폰에 고정"
+    },
+    {
+     "emoji": "😮‍💨",
+     "color": "purple",
+     "main": "퇴근 후 '하…' 한숨",
+     "sub": "아무도 '왜?'라고 안 물음"
+    }
+   ],
+   "stat_big": null,
+   "stat_caption": null,
+   "term": null,
+   "term_origin": null,
+   "term_def": null,
+   "term_example": null,
+   "bars": null,
+   "message": null,
+   "comment_prompt": null,
+   "source": null
+  },
+  {
+   "pattern": "compare",
+   "title": "연구팀이 본 건\n싸움 말고 [['배 예쁘다']] 😲",
+   "highlight_color": "yellow",
    "subtitle": null,
    "question": null,
    "boxes": [
     {
-     "label": "🤔 우리가 믿는 말",
+     "label": "🤔 우리가 믿는 것",
      "emoji": null,
      "type": null,
      "color": null,
@@ -39,17 +78,17 @@
      "sub": null,
      "rows": [
       {
-       "badge": "🧱 서른",
-       "text": "성격은 석고처럼 굳어버린다"
+       "badge": "💥 싸움",
+       "text": "큰 싸움을 잘 넘겨야 오래 간다"
       },
       {
-       "badge": "💔 연애",
-       "text": "사람 고쳐 쓰는 거 아니다"
+       "badge": "🎂 기념일",
+       "text": "기념일을 잘 챙겨야 한다"
       }
      ]
     },
     {
-     "label": "❓ 그런데 왜",
+     "label": "🔬 연구팀이 본 것",
      "emoji": null,
      "type": null,
      "color": null,
@@ -57,12 +96,12 @@
      "sub": null,
      "rows": [
       {
-       "badge": "🎓 동창회",
-       "text": "너 왜 이렇게 차분해졌어?"
+       "badge": "🛥️ 장면",
+       "text": "창밖 배를 보고 '배 예쁘다'"
       },
       {
-       "badge": "📝 재검사",
-       "text": "그때 내가 잘못 체크했나?"
+       "badge": "🎥 카메라",
+       "text": "그 말에 돌아온 반응을 찍었다"
       }
      ]
     }
@@ -78,19 +117,38 @@
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": null
+   "source": "John Gottman 발언, APA 'Speaking of Psychology' 팟캐스트 Ep.310 (시애틀 아파트 실험실)"
   },
   {
-   "pattern": "stat",
-   "title": "오히려 [[이 나이]]에\n성격이 자라요 😲",
-   "highlight_color": "yellow",
+   "pattern": "vs",
+   "title": "연구팀 관찰로는\n[[6년 뒤]] 이렇게 갈렸다 😳",
+   "highlight_color": "green",
    "subtitle": null,
    "question": null,
-   "boxes": null,
+   "boxes": [
+    {
+     "label": "💍 결혼 유지 커플",
+     "emoji": "🙋",
+     "type": null,
+     "color": "green",
+     "big": "86%",
+     "sub": "신호에 돌아본 평균",
+     "rows": null
+    },
+    {
+     "label": "💔 이혼한 커플",
+     "emoji": "📱",
+     "type": null,
+     "color": "gray",
+     "big": "33%",
+     "sub": "신호에 돌아본 평균",
+     "rows": null
+    }
+   ],
    "groups": null,
    "items": null,
-   "stat_big": "20~40세",
-   "stat_caption": "같은 사람을 오래 추적한 92개 표본을 모아 보니, 성숙 쪽 변화가 특히 두드러진 시기",
+   "stat_big": null,
+   "stat_caption": null,
    "term": null,
    "term_origin": null,
    "term_def": null,
@@ -98,69 +156,70 @@
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": "Roberts, Walton, Viechtbauer (2006), Psychological Bulletin 132(1), 1–25"
+   "source": "가트맨 연구팀 · John Gottman 발언(6년 추적, 130쌍 중 17쌍 이혼), APA 'Speaking of Psychology' Ep.310 · 동료심사 논문 원문에서는 미확인"
+  },
+  {
+   "pattern": "term",
+   "title": "그 '저기 봐!'에도\n[[이름]]이 있다 💡",
+   "highlight_color": "yellow",
+   "subtitle": null,
+   "question": null,
+   "boxes": null,
+   "groups": null,
+   "items": null,
+   "stat_big": null,
+   "stat_caption": null,
+   "term": "비드(연결 요청)",
+   "term_origin": "Bid for connection",
+   "term_def": "'너랑 연결되고 싶어'를 담은 작은 신호",
+   "term_example": "'점심 뭐 먹었어?'는 메뉴보다 '얘기하고 싶어'에 가깝다",
+   "bars": null,
+   "message": null,
+   "comment_prompt": null,
+   "source": "John Gottman & Joan DeClaire, 2001, 『The Relationship Cure』(출판사 발췌문)"
   },
   {
    "pattern": "chips",
-   "title": "20~40세엔 [[성실함]]이\n쑥 올라가는 경향 💡",
-   "highlight_color": "green",
+   "title": "근데 돌아보기,\n[['어?']]만 해도 된다고? 😮",
+   "highlight_color": "orange",
    "subtitle": null,
    "question": null,
    "boxes": null,
    "groups": [
     {
-     "label": "📈 20~40세에 특히 오름",
+     "label": "✅ 돌아보기로 쳐 줌",
      "type": null,
-     "color": "blue",
+     "color": "green",
      "chips": [
       {
-       "icon": "🗓️",
-       "name": "성실함",
-       "value": null,
-       "highlight": true
+       "icon": "🙌",
+       "name": "'우와 예쁘다!'",
+       "value": "열정적으로",
+       "highlight": false
       },
       {
-       "icon": "🧘",
-       "name": "마음의 안정",
-       "value": null,
-       "highlight": true
-      },
-      {
-       "icon": "🙋",
-       "name": "이끄는 힘",
-       "value": null,
+       "icon": "👀",
+       "name": "고개 들고 '어?'",
+       "value": "이것도 OK",
        "highlight": true
       }
      ]
     },
     {
-     "label": "🎢 10대에 오르고 노년에 내림",
-     "type": null,
-     "color": "purple",
-     "chips": [
-      {
-       "icon": "🎨",
-       "name": "새로움 추구",
-       "value": null,
-       "highlight": false
-      },
-      {
-       "icon": "⚡",
-       "name": "사회적 활력",
-       "value": null,
-       "highlight": false
-      }
-     ]
-    },
-    {
-     "label": "🌙 노년기에만 움직임",
+     "label": "❌ 놓친 반응",
      "type": null,
      "color": "gray",
      "chips": [
       {
-       "icon": "🤝",
-       "name": "다정함",
-       "value": null,
+       "icon": "📱",
+       "name": "폰만 보며 무반응",
+       "value": "외면하기",
+       "highlight": false
+      },
+      {
+       "icon": "😤",
+       "name": "'조용히 좀 해'",
+       "value": "맞서기",
        "highlight": false
       }
      ]
@@ -176,11 +235,11 @@
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": "Roberts, Walton, Viechtbauer (2006), Psychological Bulletin 132(1), 1–25"
+   "source": "John Gottman 발언, APA 팟캐스트 Ep.310 · 반응 3분류: Driver & Gottman, 2004, Family Process 43(3)"
   },
   {
-   "pattern": "term",
-   "title": "다들 조금씩\n[[어른 쪽]]으로 움직여요 💡",
+   "pattern": "conclusion",
+   "title": "오래 가는 커플은\n[[작은 신호]]에 돌아봤다 🥰",
    "highlight_color": "yellow",
    "subtitle": null,
    "question": null,
@@ -189,140 +248,87 @@
    "items": null,
    "stat_big": null,
    "stat_caption": null,
-   "term": "성숙 원칙",
-   "term_origin": "Maturity Principle",
-   "term_def": "나이 들며 더 성실하고 덜 불안해지는 경향",
-   "term_example": "마감 전날 밤샘하던 친구가 직장 3년 차에 일정표를 쓰는 것",
-   "bars": null,
-   "message": null,
-   "comment_prompt": null,
-   "source": "성숙 원칙(Maturity Principle): Caspi, Roberts, Shiner 등이 정리한 개념"
-  },
-  {
-   "pattern": "compare",
-   "title": "번호가 아니라\n[[내 상태]]가 바뀐 걸지도? 🤷",
-   "highlight_color": "orange",
-   "subtitle": null,
-   "question": null,
-   "boxes": [
+   "term": null,
+   "term_origin": null,
+   "term_def": null,
+   "term_example": null,
+   "bars": [
     {
-     "label": "📖 에니어그램 이론에선",
-     "emoji": null,
-     "type": null,
-     "color": null,
-     "big": null,
-     "sub": null,
-     "rows": [
-      {
-       "badge": "🔢 번호",
-       "text": "기본 유형은 평생 그대로라고 봐요"
-      },
-      {
-       "badge": "🌱 변화",
-       "text": "움직이는 건 성장의 정도예요"
-      }
-     ]
+     "label": "💍 결혼 유지 커플",
+     "value": 86.0,
+     "display": "86%",
+     "color": "green",
+     "type": null
     },
     {
-     "label": "🔍 그래서 이럴 수도?",
-     "emoji": null,
-     "type": null,
+     "label": "💔 이혼한 커플",
+     "value": 33.0,
+     "display": "33%",
      "color": null,
-     "big": null,
-     "sub": null,
-     "rows": [
-      {
-       "badge": "🎈 진득해진 {t7}",
-       "text": "검사에선 {t1}처럼 보일지도"
-      },
-      {
-       "badge": "🛡️ 덜 불안한 {t6}",
-       "text": "검사에선 {t9}처럼 보일지도"
-      }
-     ]
+     "type": null
     }
    ],
-   "groups": null,
-   "items": null,
-   "stat_big": null,
-   "stat_caption": null,
-   "term": null,
-   "term_origin": null,
-   "term_def": null,
-   "term_example": null,
-   "bars": null,
-   "message": null,
-   "comment_prompt": null,
-   "source": null
-  },
-  {
-   "pattern": "conclusion",
-   "title": "성격은 굳는 게 아니라\n[[자라는 중]] 💡",
-   "highlight_color": "green",
-   "subtitle": null,
-   "question": null,
-   "boxes": null,
-   "groups": null,
-   "items": null,
-   "stat_big": null,
-   "stat_caption": null,
-   "term": null,
-   "term_origin": null,
-   "term_def": null,
-   "term_example": null,
-   "bars": null,
-   "message": "결론: 변해도 나다움은 남으니, 예전 검사 결과는 {{지금의 나}}로 다시 보자!",
-   "comment_prompt": "💬 10년 전 나와 지금, 딴사람? 그대로?",
-   "source": null
+   "message": "결론: 거창한 리액션 말고, 작은 신호에 {{고개 한 번}} 돌려 주자!",
+   "comment_prompt": "💬 나는 돌아봄? '응~'? '이따 봐'?",
+   "source": "가트맨 연구팀 · John Gottman 발언, APA 'Speaking of Psychology' Ep.310 (관찰 결과, 인과 아님)"
   }
  ],
- "hook_line1": "\"서른 넘으면 성격 안 변해\", \"사람 고쳐 쓰는 거 아니다\" 많이 들어 보셨죠?",
- "hook_line2": "그런데 같은 사람을 오래 추적한 연구들을 모아 보니, 오히려 '그 나이'가 이상한 구간이었어요…",
+ "hook_line1": "노을 사진을 보냈는데 한참 뒤 'ㅇㅇ'만 돌아온 적, 보낸 쪽이든 받은 쪽이든 있죠?",
+ "hook_line2": "그런데 연구팀은 이 사소한 순간에서 6년 뒤 관계의 차이를 봤다고 해요. 그리고 필요한 반응은 생각보다 훨씬 작았어요.",
  "summary_bullets": [
-  "🧱 '서른이면 성격이 굳는다'는 통념, 데이터로 확인해 봤어요",
-  "📈 92개 표본 분석: 성실함·마음의 안정은 특히 20~40세에 올라가는 경향",
-  "🔢 에니어그램 번호가 바뀌었다면, 유형보다 내 상태가 움직였을 수도 있어요",
-  "💡 성숙 원칙: 나이 들며 대부분 조금씩 더 성실하고 덜 불안해지는 경향"
+  "🌇 큰 싸움보다 사소한 'ㅇㅇ'이 오래 남는 이유를 따라가 봤어요",
+  "🛥️ 연구팀은 '배 예쁘다' 한마디에 상대가 어떻게 반응하는지 지켜봤어요",
+  "📊 연구팀 관찰로는 6년 뒤 결혼을 유지한 커플은 상대 신호에 평균 86%, 이혼한 커플은 33% 돌아봤대요",
+  "💡 비드: '너랑 연결되고 싶어'를 담은 작은 신호예요. 고개 들고 '어?'만 해도 돌아보기로 쳐 줘요"
  ],
- "engagement_question": "10년 전의 나와 지금의 나, 어느 쪽인가요? A. 완전 딴사람 B. 본질은 그대로, 포장만 바뀜 C. 오히려 더 나다워짐. 검사 번호가 바뀐 적 있다면 몇 번에서 몇 번으로 바뀌었는지 썰 풀어주세요!",
- "newsletter_teaser": "저절로 변하는 것 말고, 내가 마음먹으면 성격은 정말 바뀔까요? 연인이 바꿔 달라고 할 때의 노력은 오래갈까요? 뉴스레터에서 풀어볼게요.",
+ "engagement_question": "애인이 '저기 봐!' 했을 때 나는? A 바로 고개 돌림 / B '응~' 하고 폰은 계속 / C '이따 봐' 🙋 내 유형도 같이 남기고, 서운했던 썰이나 찔렸던 썰 풀어주세요!",
+ "newsletter_teaser": "그럼 무시당한 비드는 어떻게 될까요? 다시 보낼까요, 조용히 멈출까요? 연락이 줄어든 애인 이야기는 뉴스레터에서 풀어볼게요.",
  "hashtags": [
+  "#연애심리",
+  "#비드",
+  "#가트맨",
   "#에니어그램",
-  "#성격변화",
-  "#성숙원칙",
   "#에니어시온"
  ],
  "instagram_hashtags": [
-  "#에니어그램유형",
-  "#성격심리학",
+  "#연애심리학",
+  "#커플심리",
+  "#관계심리",
+  "#연애팁",
   "#심리학카드뉴스",
-  "#사람은안변한다",
-  "#서른",
-  "#자기이해",
-  "#성격검사",
-  "#빅파이브",
-  "#심리테스트",
-  "#나다움",
-  "#성장"
+  "#에니어그램유형",
+  "#연애상담",
+  "#카드뉴스",
+  "#심리학",
+  "#커플",
+  "#연애고민"
  ],
  "sources": [
   {
-   "title": "Roberts, Walton, Viechtbauer (2006). Patterns of mean-level change in personality traits across the life course: A meta-analysis of longitudinal studies. Psychological Bulletin 132(1), 1–25",
-   "url": "https://eric.ed.gov/?id=EJ735270"
+   "title": "APA Speaking of Psychology: The science of loving relationships (John Gottman, Ep.310)",
+   "url": "https://www.apa.org/news/podcasts/speaking-of-psychology/loving-relationships"
+  },
+  {
+   "title": "Gottman & DeClaire, The Relationship Cure (Penguin Random House 발췌문)",
+   "url": "https://penguinrandomhouselibrary.com/book/?isbn=9780609809532"
+  },
+  {
+   "title": "Driver & Gottman (2004), Daily Marital Interactions and Positive Affect During Marital Conflict Among Newlywed Couples, Family Process 43(3):301–314",
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1545-5300.2004.00024.x"
   }
  ],
  "fact_check_notes": [
-  "[3장·4장] '92개 표본' 메타분석인지 Roberts 외 2006 원문(Psychological Bulletin 132(1), 1–25) 초록과 대조 (노트상 ✅)",
-  "[3장] '20~40세에 특히 높아짐'이 사회적 주도성·성실성·정서적 안정성에 해당하는 결과인지 확인. 카드에서는 '성숙 쪽 변화가 특히 두드러진 시기'로 표현했으니, '가장 많이 변한다'로 읽혀도 무리가 없는지 점검",
-  "[4장] 개방성·사회적 활력은 청소년기에 오르고 노년기에 내려간다는 결과, 친화성은 노년기에만 변한다는 결과를 원문과 대조",
-  "[4장] 쉬운 말 번역 점검: 성실함=성실성, 마음의 안정=정서적 안정성, 이끄는 힘=사회적 주도성, 새로움 추구=개방성, 다정함=친화성",
-  "[5장] '성숙 원칙(Maturity Principle)'의 출처(Caspi·Roberts·Shiner 등)는 노트상 미열람. source 줄 표기가 맞는지 확인하고, 확인이 안 되면 source 줄을 수정",
-  "[5장] 성숙 원칙 뜻풀이 '더 성실하고 덜 불안해지는 경향'이 개념 정의와 맞는지 확인",
-  "[6장] '기본 유형은 평생 그대로, 움직이는 건 성장의 정도'는 에니어그램 이론(리소-허드슨 계열)의 주장이며 연구 결과가 아님. 카드에서 '이론에선'으로 표시했는지 확인",
-  "[6장] '진득해진 7번이 1번처럼, 덜 불안한 6번이 9번처럼 보일 수 있다'는 시온식 해석임. '~보일지도'처럼 열린 표현이 유지됐는지 확인",
-  "[7장] '변해도 나다움은 남는다'는 상대적 순위가 짧은 기간에는 비교적 유지된다는 노트 정리에 근거함. 표에는 출처가 없으므로 Roberts 2006 등 원문에서 뒷받침되는지 확인",
-  "[미사용] Soto 외 2011의 N=1,267,218, Harris 외 2016의 77세 추적 인원과 14세·77세 상관, Damian 외 2019의 50년 추적 인원과 결론 수치는 미확인(❌)이라 카드에 넣지 않음. 추가하려면 원문 확인이 먼저",
-  "[미사용] Project Talent 약 44만 명, 스코틀랜드 1,208명, Baranski 외 2021의 1만 3천여 명은 원문 미열람(🔶)이라 카드에 쓰지 않음. 뉴스레터에서 쓸 경우 원문 확인 필요",
-  "[전체] 빅파이브 연구들은 에니어그램 유형을 측정하지 않았음. 카드 어디에도 '연구가 유형 불변(또는 변화)을 증명했다'는 표현이 없는지 최종 확인"
+  "86% vs 33%(4·7장): 가트맨 본인의 APA 팟캐스트 발언으로만 확인됨. 동료심사 논문(Driver & Gottman, 2004)에는 없음. 카드 본문은 '연구팀 관찰로는', source 줄은 '가트맨 연구팀·발언'으로 표기함. '과학적으로 증명' 같은 표현이 없는지 다시 확인할 것",
+  "86%·33%는 각 집단의 '평균' 돌아본 비율임. 비교 집단은 APA 발언 기준 '결혼 유지 vs 이혼'으로 적음. 연구소 블로그는 '행복하게 유지 vs 헤어졌거나 불행한 커플'로 정의가 다르니 혼용하지 말 것",
+  "'6년 뒤, 130쌍 중 17쌍 이혼'은 발언 기준이며 source 줄에만 적음. 2004 논문은 '130쌍 중 50쌍이 아파트 실험실 참여, 49쌍 분석'으로 표본 수가 다름",
+  "'배 예쁘다' 실험 장면과 카메라를 남편 쪽으로 돌린 장면(3장): APA 팟캐스트 가트맨 발언 원문과 대조할 것",
+  "'어?'만 해도 돌아보기, 신나는 반응은 '열정적으로 돌아보기', '조용히 좀 해'는 맞서기(6장): 가트맨 발언 원문과 대조할 것",
+  "반응 3분류(돌아보기·외면하기·맞서기)는 2004 논문 본문에서 확인됨",
+  "비드 정의(5장): 출판사 발췌문의 '질문·몸짓·눈빛·손길 등 연결을 원하는 모든 작은 표현'과 대조할 것. 점심 메뉴 예시는 리서치 노트의 일상 예시를 그대로 옮김",
+  "관찰 연구라 상관관계일 뿐임(저자들도 인과 방향은 추가 연구가 필요하다고 밝힘). 결론 카드와 게시글에 '돌아보면 이혼하지 않는다' 같은 인과 표현이 없는지 확인할 것",
+  "표본의 한계: 1990년대 시애틀, 첫 결혼, 아이 없는 이성애 신혼부부. 필요하면 캡션에 덧붙일 것",
+  "커버의 4번·9번 연결은 연구 근거가 없는 시온식 해석임. '~일 수도?'라는 열린 표현을 유지할 것",
+  "사용하지 않은 숫자: 82% vs 19%, 50% vs 14%(출판사 발췌문 ✅, 남편·아내별 수치)와 100번 vs 65번(✅, 뉴스레터용으로 남겨 둠)",
+  "'무시가 대놓고 거절하는 것보다 더 해롭다'는 ❌ 미확인이라 사용하지 않음. '거절당하면 다시 비드하지 않는다'도 미확인이라 뉴스레터 예고에서 질문으로만 던짐"
  ]
 }
