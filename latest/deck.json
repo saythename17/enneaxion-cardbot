@@ -1,14 +1,14 @@
 {
- "topic": "가트맨 『The Relationship Cure』의 '비드': 사소한 '저기 봐!'에 어떻게 반응하는지가 관계를 비춘다",
- "category": "연애심리",
- "slug": "bids-turning-toward",
+ "topic": "이별은 정말 갑자기 올까? 헤어진 커플의 만족도는 이별 7~28개월 전부터 급락하고, 통보한 쪽과 받은 쪽의 하락 시점은 다르다",
+ "category": "심리학",
+ "slug": "breakup-terminal-decline",
  "cards": [
   {
    "pattern": "cover",
-   "title": "노을 사진에\n[['ㅇㅇ']]만 오면\n왜 이리 서운할까? 🤔",
+   "title": "이별은 왜\n늘 [[갑자기]]\n찾아올까? 🤔",
    "highlight_color": "yellow",
-   "subtitle": "💘 연애심리 · 책 한 권 핵심 개념",
-   "question": "한숨 보낸 {t4}, '응~' 넘긴 {t9}일 수도?",
+   "subtitle": "🔬 이별 심리 연구",
+   "question": "💭 속으로 삭이는 {t5} {t9}라면 특히 궁금할지도?",
    "boxes": null,
    "groups": null,
    "items": null,
@@ -25,7 +25,7 @@
   },
   {
    "pattern": "list",
-   "title": "이런 순간,\n왜 [[유독 오래]] 남을까? 🥲",
+   "title": "나는 날벼락인데\n상대는 [[오래 고민했다]]? 🤷",
    "highlight_color": "orange",
    "subtitle": null,
    "question": null,
@@ -33,22 +33,22 @@
    "groups": null,
    "items": [
     {
-     "emoji": "🌇",
-     "color": "orange",
-     "main": "노을 사진에 'ㅇㅇ'",
-     "sub": "한참 뒤 온 두 글자"
+     "emoji": "💬",
+     "color": "red",
+     "main": "\"우리 얘기 좀 해\"",
+     "sub": "어제까지 이모티콘 카톡"
     },
     {
-     "emoji": "👟",
-     "color": "blue",
-     "main": "'저기 봐!'에 '응…'",
-     "sub": "눈은 계속 폰에 고정"
-    },
-    {
-     "emoji": "😮‍💨",
+     "emoji": "📸",
      "color": "purple",
-     "main": "퇴근 후 '하…' 한숨",
-     "sub": "아무도 '왜?'라고 안 물음"
+     "main": "사진이 줄던 그 무렵",
+     "sub": "헤어지고서야 보인 흔적"
+    },
+    {
+     "emoji": "🗣️",
+     "color": "blue",
+     "main": "\"1년 전에 끝났어\"",
+     "sub": "친구는 웃으며 말했다"
     }
    ],
    "stat_big": null,
@@ -63,53 +63,16 @@
    "source": null
   },
   {
-   "pattern": "compare",
-   "title": "연구팀이 본 건\n싸움 말고 [['배 예쁘다']] 😲",
+   "pattern": "stat",
+   "title": "만족도는 이별\n[[7~28개월 전]]부터 꺾였다 😲",
    "highlight_color": "yellow",
    "subtitle": null,
    "question": null,
-   "boxes": [
-    {
-     "label": "🤔 우리가 믿는 것",
-     "emoji": null,
-     "type": null,
-     "color": null,
-     "big": null,
-     "sub": null,
-     "rows": [
-      {
-       "badge": "💥 싸움",
-       "text": "큰 싸움을 잘 넘겨야 오래 간다"
-      },
-      {
-       "badge": "🎂 기념일",
-       "text": "기념일을 잘 챙겨야 한다"
-      }
-     ]
-    },
-    {
-     "label": "🔬 연구팀이 본 것",
-     "emoji": null,
-     "type": null,
-     "color": null,
-     "big": null,
-     "sub": null,
-     "rows": [
-      {
-       "badge": "🛥️ 장면",
-       "text": "창밖 배를 보고 '배 예쁘다'"
-      },
-      {
-       "badge": "🎥 카메라",
-       "text": "그 말에 돌아온 반응을 찍었다"
-      }
-     ]
-    }
-   ],
+   "boxes": null,
    "groups": null,
    "items": null,
-   "stat_big": null,
-   "stat_caption": null,
+   "stat_big": "7~28개월",
+   "stat_caption": "서구 4개국 약 1만 1천 명, 이별일부터 거꾸로 본 평균",
    "term": null,
    "term_origin": null,
    "term_def": null,
@@ -117,31 +80,88 @@
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": "John Gottman 발언, APA 'Speaking of Psychology' 팟캐스트 Ep.310 (시애틀 아파트 실험실)"
+   "source": "Bühler & Orth, 2025, JPSP (독일·호주·영국·네덜란드, 헤어진 11,295명, 말기 시작 이별 0.58~2.30년 전)"
   },
   {
-   "pattern": "vs",
-   "title": "연구팀 관찰로는\n[[6년 뒤]] 이렇게 갈렸다 😳",
+   "pattern": "compare",
+   "title": "큰 사건 하나보다\n[[흐름]]이 먼저였다 💡",
    "highlight_color": "green",
    "subtitle": null,
    "question": null,
    "boxes": [
     {
-     "label": "💍 결혼 유지 커플",
-     "emoji": "🙋",
+     "label": "🤔 통념",
+     "emoji": null,
      "type": null,
-     "color": "green",
-     "big": "86%",
-     "sub": "신호에 돌아본 평균",
+     "color": null,
+     "big": null,
+     "sub": null,
+     "rows": [
+      {
+       "badge": "💥 원인",
+       "text": "바람이나 큰 싸움 하나로 갑자기"
+      },
+      {
+       "badge": "📅 기준",
+       "text": "3년 차 권태기처럼 연차 따라"
+      }
+     ]
+    },
+    {
+     "label": "🔬 실제",
+     "emoji": null,
+     "type": null,
+     "color": null,
+     "big": null,
+     "sub": null,
+     "rows": [
+      {
+       "badge": "📉 모양",
+       "text": "오래 천천히 식다가, 어느 순간 확"
+      },
+      {
+       "badge": "⏳ 기준",
+       "text": "사귄 기간보다 이별까지 남은 시간"
+      }
+     ]
+    }
+   ],
+   "groups": null,
+   "items": null,
+   "stat_big": null,
+   "stat_caption": null,
+   "term": null,
+   "term_origin": null,
+   "term_def": null,
+   "term_example": null,
+   "bars": null,
+   "message": null,
+   "comment_prompt": null,
+   "source": "Bühler & Orth, 2025, Journal of Personality and Social Psychology"
+  },
+  {
+   "pattern": "vs",
+   "title": "같은 이별인데\n[[시계가 달랐다]] 🤔",
+   "highlight_color": "yellow",
+   "subtitle": null,
+   "question": null,
+   "boxes": [
+    {
+     "label": "🗣️ 통보한 사람",
+     "emoji": "⏰",
+     "type": null,
+     "color": "purple",
+     "big": "더 일찍",
+     "sub": "먼저 불만이 쌓이기 시작",
      "rows": null
     },
     {
-     "label": "💔 이혼한 커플",
-     "emoji": "📱",
+     "label": "📩 통보받은 사람",
+     "emoji": "⚡",
      "type": null,
-     "color": "gray",
-     "big": "33%",
-     "sub": "신호에 돌아본 평균",
+     "color": "red",
+     "big": "더 가파르게",
+     "sub": "늦게 시작해 크게 떨어짐",
      "rows": null
     }
    ],
@@ -156,91 +176,32 @@
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": "가트맨 연구팀 · John Gottman 발언(6년 추적, 130쌍 중 17쌍 이혼), APA 'Speaking of Psychology' Ep.310 · 동료심사 논문 원문에서는 미확인"
+   "source": "Bühler & Orth, 2025, JPSP / 마인츠대 보도자료, 2025.3.21"
   },
   {
    "pattern": "term",
-   "title": "그 '저기 봐!'에도\n[[이름]]이 있다 💡",
-   "highlight_color": "yellow",
-   "subtitle": null,
-   "question": null,
-   "boxes": null,
-   "groups": null,
-   "items": null,
-   "stat_big": null,
-   "stat_caption": null,
-   "term": "비드(연결 요청)",
-   "term_origin": "Bid for connection",
-   "term_def": "'너랑 연결되고 싶어'를 담은 작은 신호",
-   "term_example": "'점심 뭐 먹었어?'는 메뉴보다 '얘기하고 싶어'에 가깝다",
-   "bars": null,
-   "message": null,
-   "comment_prompt": null,
-   "source": "John Gottman & Joan DeClaire, 2001, 『The Relationship Cure』(출판사 발췌문)"
-  },
-  {
-   "pattern": "chips",
-   "title": "근데 돌아보기,\n[['어?']]만 해도 된다고? 😮",
+   "title": "식다가 확 꺾이는 것,\n[[이름이 있다]] 💡",
    "highlight_color": "orange",
    "subtitle": null,
    "question": null,
    "boxes": null,
-   "groups": [
-    {
-     "label": "✅ 돌아보기로 쳐 줌",
-     "type": null,
-     "color": "green",
-     "chips": [
-      {
-       "icon": "🙌",
-       "name": "'우와 예쁘다!'",
-       "value": "열정적으로",
-       "highlight": false
-      },
-      {
-       "icon": "👀",
-       "name": "고개 들고 '어?'",
-       "value": "이것도 OK",
-       "highlight": true
-      }
-     ]
-    },
-    {
-     "label": "❌ 놓친 반응",
-     "type": null,
-     "color": "gray",
-     "chips": [
-      {
-       "icon": "📱",
-       "name": "폰만 보며 무반응",
-       "value": "외면하기",
-       "highlight": false
-      },
-      {
-       "icon": "😤",
-       "name": "'조용히 좀 해'",
-       "value": "맞서기",
-       "highlight": false
-      }
-     ]
-    }
-   ],
+   "groups": null,
    "items": null,
    "stat_big": null,
    "stat_caption": null,
-   "term": null,
-   "term_origin": null,
-   "term_def": null,
-   "term_example": null,
+   "term": "말기 하락",
+   "term_origin": "Terminal Decline",
+   "term_def": "끝을 앞두고 천천히 식다가 어느 순간 확 떨어지는 2단계 내리막",
+   "term_example": "연락이 조금씩 줄다가, 어느 날부터 주말 약속이 연달아 취소될 때",
    "bars": null,
    "message": null,
    "comment_prompt": null,
-   "source": "John Gottman 발언, APA 팟캐스트 Ep.310 · 반응 3분류: Driver & Gottman, 2004, Family Process 43(3)"
+   "source": "마인츠대 보도자료, 2025.3.21"
   },
   {
    "pattern": "conclusion",
-   "title": "오래 가는 커플은\n[[작은 신호]]에 돌아봤다 🥰",
-   "highlight_color": "yellow",
+   "title": "만족도가 떨어졌다고\n[[끝은 아니다]] 💡",
+   "highlight_color": "green",
    "subtitle": null,
    "question": null,
    "boxes": null,
@@ -252,83 +213,66 @@
    "term_origin": null,
    "term_def": null,
    "term_example": null,
-   "bars": [
-    {
-     "label": "💍 결혼 유지 커플",
-     "value": 86.0,
-     "display": "86%",
-     "color": "green",
-     "type": null
-    },
-    {
-     "label": "💔 이혼한 커플",
-     "value": 33.0,
-     "display": "33%",
-     "color": null,
-     "type": null
-    }
-   ],
-   "message": "결론: 거창한 리액션 말고, 작은 신호에 {{고개 한 번}} 돌려 주자!",
-   "comment_prompt": "💬 나는 돌아봄? '응~'? '이따 봐'?",
-   "source": "가트맨 연구팀 · John Gottman 발언, APA 'Speaking of Psychology' Ep.310 (관찰 결과, 인과 아님)"
+   "bars": null,
+   "message": "결론: 천천히 식는 시기는 끝이 아닌 {{경고등}}, 그때 먼저 대화를 꺼내자!",
+   "comment_prompt": "💬 나는 통보한 쪽? 받은 쪽?",
+   "source": "마인츠대 보도자료, 2025.3.21 (연구자 의견: 많은 커플이 전환점을 지난 뒤에야 도움을 구함)"
   }
  ],
- "hook_line1": "노을 사진을 보냈는데 한참 뒤 'ㅇㅇ'만 돌아온 적, 보낸 쪽이든 받은 쪽이든 있죠?",
- "hook_line2": "그런데 연구팀은 이 사소한 순간에서 6년 뒤 관계의 차이를 봤다고 해요. 그리고 필요한 반응은 생각보다 훨씬 작았어요.",
+ "hook_line1": "어제까지 이모티콘 섞어 카톡하던 사람이 \"우리 얘기 좀 해\"라고 한다면…",
+ "hook_line2": "그런데 상대는 담담하게 \"나 꽤 오래 고민했어\"라고 말해요. 그 '오래'는 대체 언제부터였을까요?",
  "summary_bullets": [
-  "🌇 큰 싸움보다 사소한 'ㅇㅇ'이 오래 남는 이유를 따라가 봤어요",
-  "🛥️ 연구팀은 '배 예쁘다' 한마디에 상대가 어떻게 반응하는지 지켜봤어요",
-  "📊 연구팀 관찰로는 6년 뒤 결혼을 유지한 커플은 상대 신호에 평균 86%, 이혼한 커플은 33% 돌아봤대요",
-  "💡 비드: '너랑 연결되고 싶어'를 담은 작은 신호예요. 고개 들고 '어?'만 해도 돌아보기로 쳐 줘요"
+  "📉 서구 4개국 장기 추적 연구에서 헤어진 커플의 관계 만족도는 이별 약 7~28개월 전부터 가파르게 떨어지는 경향을 보였어요. 헤어진 사람들을 거꾸로 짚어 본 평균이라 내 관계를 예측하는 공식은 아니에요.",
+  "⏳ 만족도 변화는 '사귄 지 몇 년째'보다 '이별까지 남은 시간'으로 더 잘 설명됐어요.",
+  "⏰ 통보한 사람은 더 일찍 식기 시작했고, 통보받은 사람은 늦게 시작해 더 가파르게 떨어졌어요.",
+  "💡 말기 하락: 끝을 앞두고 천천히 식다가 어느 순간 확 꺾이는 2단계 내리막이에요."
  ],
- "engagement_question": "애인이 '저기 봐!' 했을 때 나는? A 바로 고개 돌림 / B '응~' 하고 폰은 계속 / C '이따 봐' 🙋 내 유형도 같이 남기고, 서운했던 썰이나 찔렸던 썰 풀어주세요!",
- "newsletter_teaser": "그럼 무시당한 비드는 어떻게 될까요? 다시 보낼까요, 조용히 멈출까요? 연락이 줄어든 애인 이야기는 뉴스레터에서 풀어볼게요.",
+ "engagement_question": "마지막 이별, 나는 🅰 통보한 쪽 🅱 통보받은 쪽 🅲 서로 자연스럽게, 어느 쪽이었나요? 돌아보니 '그때부터였다' 싶은 순간이 있었다면 썰 풀어주세요 👇",
+ "newsletter_teaser": "아직 '천천히 식는' 시기라면 무엇으로 알아챌 수 있고, 정말 되돌릴 수 있을까요? 뉴스레터에서 풀어볼게요.",
  "hashtags": [
+  "#이별심리",
   "#연애심리",
-  "#비드",
-  "#가트맨",
+  "#심리학",
   "#에니어그램",
   "#에니어시온"
  ],
  "instagram_hashtags": [
-  "#연애심리학",
-  "#커플심리",
+  "#이별",
+  "#연애",
+  "#연애고민",
   "#관계심리",
-  "#연애팁",
-  "#심리학카드뉴스",
-  "#에니어그램유형",
-  "#연애상담",
+  "#심리학연구",
   "#카드뉴스",
-  "#심리학",
-  "#커플",
-  "#연애고민"
+  "#연애상담",
+  "#에니어그램유형",
+  "#마음공부",
+  "#이별극복"
  ],
  "sources": [
   {
-   "title": "APA Speaking of Psychology: The science of loving relationships (John Gottman, Ep.310)",
-   "url": "https://www.apa.org/news/podcasts/speaking-of-psychology/loving-relationships"
+   "title": "Bühler & Orth (2025). Terminal Decline of Satisfaction in Romantic Relationships: Evidence From Four Longitudinal Studies. JPSP (ISER 초록)",
+   "url": "https://www.iser.essex.ac.uk/research/publications/publication-588573"
   },
   {
-   "title": "Gottman & DeClaire, The Relationship Cure (Penguin Random House 발췌문)",
-   "url": "https://penguinrandomhouselibrary.com/book/?isbn=9780609809532"
-  },
-  {
-   "title": "Driver & Gottman (2004), Daily Marital Interactions and Positive Affect During Marital Conflict Among Newlywed Couples, Family Process 43(3):301–314",
-   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1545-5300.2004.00024.x"
+   "title": "마인츠대 보도자료 (2025.3.21). Transition point in romantic relationships signals the beginning of their end",
+   "url": "https://www.research-in-germany.org/idw-news/en_US/2025/3/2025-03-21_Transition_point_in_romantic_relationships_signals_the_beginning_of_their_end.html"
   }
  ],
  "fact_check_notes": [
-  "86% vs 33%(4·7장): 가트맨 본인의 APA 팟캐스트 발언으로만 확인됨. 동료심사 논문(Driver & Gottman, 2004)에는 없음. 카드 본문은 '연구팀 관찰로는', source 줄은 '가트맨 연구팀·발언'으로 표기함. '과학적으로 증명' 같은 표현이 없는지 다시 확인할 것",
-  "86%·33%는 각 집단의 '평균' 돌아본 비율임. 비교 집단은 APA 발언 기준 '결혼 유지 vs 이혼'으로 적음. 연구소 블로그는 '행복하게 유지 vs 헤어졌거나 불행한 커플'로 정의가 다르니 혼용하지 말 것",
-  "'6년 뒤, 130쌍 중 17쌍 이혼'은 발언 기준이며 source 줄에만 적음. 2004 논문은 '130쌍 중 50쌍이 아파트 실험실 참여, 49쌍 분석'으로 표본 수가 다름",
-  "'배 예쁘다' 실험 장면과 카메라를 남편 쪽으로 돌린 장면(3장): APA 팟캐스트 가트맨 발언 원문과 대조할 것",
-  "'어?'만 해도 돌아보기, 신나는 반응은 '열정적으로 돌아보기', '조용히 좀 해'는 맞서기(6장): 가트맨 발언 원문과 대조할 것",
-  "반응 3분류(돌아보기·외면하기·맞서기)는 2004 논문 본문에서 확인됨",
-  "비드 정의(5장): 출판사 발췌문의 '질문·몸짓·눈빛·손길 등 연결을 원하는 모든 작은 표현'과 대조할 것. 점심 메뉴 예시는 리서치 노트의 일상 예시를 그대로 옮김",
-  "관찰 연구라 상관관계일 뿐임(저자들도 인과 방향은 추가 연구가 필요하다고 밝힘). 결론 카드와 게시글에 '돌아보면 이혼하지 않는다' 같은 인과 표현이 없는지 확인할 것",
-  "표본의 한계: 1990년대 시애틀, 첫 결혼, 아이 없는 이성애 신혼부부. 필요하면 캡션에 덧붙일 것",
-  "커버의 4번·9번 연결은 연구 근거가 없는 시온식 해석임. '~일 수도?'라는 열린 표현을 유지할 것",
-  "사용하지 않은 숫자: 82% vs 19%, 50% vs 14%(출판사 발췌문 ✅, 남편·아내별 수치)와 100번 vs 65번(✅, 뉴스레터용으로 남겨 둠)",
-  "'무시가 대놓고 거절하는 것보다 더 해롭다'는 ❌ 미확인이라 사용하지 않음. '거절당하면 다시 비드하지 않는다'도 미확인이라 뉴스레터 예고에서 질문으로만 던짐"
+  "논문 서지: Bühler & Orth, Journal of Personality and Social Psychology, 2025년 3월 20일, DOI 10.1037/pspp0000551. 사전등록 연구가 맞는지 확인",
+  "카드 3: '7~28개월'. 초록의 '0.58~2.30년 전'과 보도자료의 '7~28개월' 표현이 일치하는지 대조",
+  "카드 3: '서구 4개국 약 1만 1천 명'. 보도자료의 독일·호주·영국·네덜란드, 헤어진 집단 합계 11,295명과 대조 (source 줄에 정확한 수 표기)",
+  "카드 3: '이별일부터 거꾸로 본 평균'. 헤어진 사람들을 이별 시점 기준으로 정렬한 분석이라는 점 확인. 개인 관계 예측 공식이 아니라는 주의점 반영",
+  "카드 4: '오래 천천히 식다가, 어느 순간 확'. 초록·보도자료의 2단계 하락(말기 전 단계와 말기) 묘사와 대조",
+  "카드 4: '사귄 기간보다 이별까지 남은 시간'. 초록의 '사귄 기간보다 이별까지 남은 시간으로 더 잘 예측됨' 문장과 대조",
+  "카드 4: '3년 차 권태기'는 통념 예시일 뿐 연구 결과가 아님. 보도자료의 '10년 즈음 최저점'은 원 논문 미확인이라 사용하지 않음",
+  "카드 5: 통보한 사람은 더 일찍 불만족, 통보받은 사람은 늦게 시작해 더 크게 하락. 방향만 썼으며 차이의 구체적 수치(몇 개월)는 미확인이라 넣지 않음",
+  "카드 6: '말기 하락(Terminal Decline)' 원어 표기와 보도자료의 '다른 심리학 분야에서 가져온 개념' 설명 확인. 노화 연구 기원은 리서치 노트 작성자의 배경지식이라 카드에 넣지 않음",
+  "카드 6: term_example(연락이 줄다가 주말 약속이 연달아 취소됨)은 리서치 노트의 일상 예시를 각색한 것이며 연구 데이터가 아님",
+  "카드 7: '경고등'은 연구자의 강한 표현('말기에 들어서면 관계는 끝날 운명')을 순화한 것. 근거는 헤어지지 않은 비교 집단에서 말기가 나타나지 않았다는 보도자료 인터뷰",
+  "카드 7 source: '많은 커플이 전환점을 지난 뒤에야 도움을 구함'과 '더 이른 시기 개입' 제안은 연구 데이터가 아니라 연구자 의견(보도자료)",
+  "표지 {t5} {t9} 연결은 시온식 해석. 에니어그램 유형과 말기 하락을 직접 연결한 연구는 없음. 노트에는 '5번 관찰자', '6번 충실한 사람'으로 적혀 있으나 표준 유형 이름(5번 탐구가, 6번 충실가)으로 통일",
+  "표본이 모두 서구 4개국이라 한국 커플에 그대로 적용하기 조심스러움. 게시글 요약에 '서구 4개국'으로 명시",
+  "사용하지 않은 내용: 삶 만족도에서 덜 뚜렷한 하락, 나이·결혼 여부에 따른 차이(방향 미확인), 후보 B~E 수치(미확인)"
  ]
 }
